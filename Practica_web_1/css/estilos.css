@@ -1,0 +1,274 @@
+:root {
+    --color_1: #e74c3c;
+    --color_2: #2ce0b8;
+    --color_3: #6acf17;
+    --color_4: #F5B041;
+    --color_5: #212f3d;
+    --color_6: #5d6d7e;
+    --color_7: #f2f2f2;
+    --color: #000;
+    --background: #fbfcfc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--color);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* aside */
+
+.menu {
+    background: var(--color_5);
+    height: 100vh;
+    width: 25%;
+    padding-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+.menu img {
+    width: 50%;
+    height: calc(284 * 0.5);
+    max-height: 284px;
+    vertical-align: top;
+    margin: 0 auto;
+}
+
+.menu p {
+    margin: 5% auto;
+    padding-right: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    color:  var(--color_7);
+}
+
+.menu ul {
+    margin: 100px 20px 0 20px;
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 15px 25px 25px 35px;
+    font-weight: bold;
+}
+
+.menu ul li a {
+    color: var(--color_7);
+    text-decoration: none;
+}
+
+/* contenedor */
+
+.contenedor {
+    background: var(--background);
+    width: calc(100% - 25%);
+    height: 100vh;
+
+    position: absolute;
+    left: 25%;
+}
+
+    /* Header */
+
+header {
+    background: var(--background);
+    height: 13vh;
+    text-align: center;
+    margin: 0 10px 10px 10px;
+    padding: auto;
+    border-bottom: var(--color_2) 2px solid;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    text-transform: uppercase;
+    color: var(--color_5);
+}
+
+header p {
+    color: var(--color_6);
+}
+
+    /* Contenedor de articulo */
+
+.contenedor-art {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 10px; */
+}
+
+section {
+	max-width: 800px;
+	width: 90%;
+	margin: 20px auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+section .card {
+	background: #fff;
+	height: 90%;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+section h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+section article {
+	line-height: 28px;
+    text-align: justify;
+	margin: 0 10px 20px 40px;
+	color: #494949;
+	font-size: 18px;
+}
+
+section img {
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+    /* footer */
+
+footer {
+    background: var(--color_5);
+    height: 250px;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+footer .contactenos,
+footer .servicios,
+footer .redes-sociales {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+footer h1 {
+    color: var(--color_7);
+    margin-bottom: 20px;
+}
+
+footer p,
+footer a {
+    color: var(--color_6);
+    margin-bottom: 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+footer .redes-sociales .redes .iconos-sociales,
+footer .contactenos .informacion .datos,
+footer .servicios .servicio .habilidades {
+    width: 100%;
+    padding-left: 30px;
+}
+
+@media screen and (max-width: 900px) {
+    .contenedor-art {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    footer h1 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    
+    footer p,
+    footer a {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    footer .redes-sociales .redes .iconos-sociales,
+    footer .contactenos .informacion .datos,
+    footer .servicios .servicio .habilidades {
+        width: 100%;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        padding-top: 25%;
+    }
+
+    section h1 {
+        font-size: 38px;
+        margin-bottom: 20px;
+        color: var(--color_5);
+    }
+    
+    section article {
+        line-height: 20px;
+        text-align: justify;
+        margin: 0 10px 20px 40px;
+        color: #494949;
+        font-size: 16px;
+    }
+
+    footer h1 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    
+    footer p,
+    footer a {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    footer .redes-sociales .redes .iconos-sociales,
+    footer .contactenos .informacion .datos,
+    footer .servicios .servicio .habilidades {
+        width: 100%;
+        padding-left: 0;
+    }
+}
